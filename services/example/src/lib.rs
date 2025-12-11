@@ -1,5 +1,3 @@
-//! JAM SDK empty service
-
 #![cfg_attr(any(target_arch = "riscv32", target_arch = "riscv64"), no_std)]
 #![allow(clippy::unwrap_used)]
 
@@ -20,13 +18,13 @@ impl jam_pvm_common::Service for Service {
         _payload: WorkPayload,
         _package_hash: WorkPackageHash,
     ) -> WorkOutput {
-        info!("Empty Service Refine, {service_id:x}h");
+        info!("Example Service Refine, {service_id:x}h");
         alloc::vec![].into()
     }
 
     fn accumulate(now: Slot, id: ServiceId, _item_count: usize) -> Option<Hash> {
         info!(
-            "Empty Service Accumulate, {id:x}h @{now} ${}",
+            "Example Service Accumulate, {id:x}h @{now} ${}",
             accumulate::my_info().balance
         );
         for item in accumulate::accumulate_items() {

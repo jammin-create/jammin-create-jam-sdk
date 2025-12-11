@@ -1,18 +1,18 @@
 [package]
 edition = "2021"
-name = "empty"
+name = "example"
 version = "0.0.1"
 authors = ["Fluffy Labs <hello@fluffylabs.dev>"]
 description = "Minimal JAM-SDK service example"
 readme = "README.md"
 license = "MPL2"
-repository = "https://github.com/tomusdrw/jam-examples"
+repository = "https://github.com/FluffyLabs/jammin-template-jam-sdk.git"
 
 [features]
 default = []
 
 [lib]
-name = "empty"
+name = "example"
 path = "src/lib.rs"
 
 [dependencies.bounded-collections]

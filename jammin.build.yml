@@ -1,0 +1,4 @@
+services:
+  - path: services/example
+    name: example
+    sdk: jam-sdk

@@ -1,0 +1,1 @@
+# Example JAM SDK service
