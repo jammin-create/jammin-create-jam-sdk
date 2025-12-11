@@ -1,0 +1,65 @@
+[package]
+edition = "2021"
+name = "empty"
+version = "0.0.1"
+authors = ["Fluffy Labs <hello@fluffylabs.dev>"]
+description = "Minimal JAM-SDK service example"
+readme = "README.md"
+license = "MPL2"
+repository = "https://github.com/tomusdrw/jam-examples"
+
+[features]
+default = []
+
+[lib]
+name = "empty"
+path = "src/lib.rs"
+
+[dependencies.bounded-collections]
+version = "0.3.2"
+features = ["jam-codec"]
+default-features = false
+
+[dependencies.codec]
+version = "0.1.1"
+features = [
+    "derive",
+    "max-encoded-len",
+]
+default-features = false
+package = "jam-codec"
+
+[dependencies.jam-pvm-common]
+version = "0.1.26"
+features = [
+    "service",
+    "logging",
+]
+default-features = false
+
+[dependencies.jam-types]
+version = "0.1.26"
+default-features = false
+
+[dependencies.polkavm-derive]
+version = "0.29.0"
+features = []
+default-features = false
+
+[dependencies.wasmi]
+version = "0.39.1"
+default-features = false
+
+[lints.clippy]
+fn_to_numeric_cast_any = "deny"
+new_without_default = "allow"
+redundant_closure = "allow"
+result_unit_err = "allow"
+too_many_arguments = "allow"
+type_complexity = "allow"
+unwrap_used = "deny"
+use_debug = "deny"
+
+[lints.clippy.correctness]
+level = "deny"
+priority = -1
