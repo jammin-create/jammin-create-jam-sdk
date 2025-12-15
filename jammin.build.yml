@@ -1,4 +1,4 @@
 services:
   - path: services/example
     name: example
-    sdk: jam-sdk
+    sdk: jam-sdk-0.1.26
